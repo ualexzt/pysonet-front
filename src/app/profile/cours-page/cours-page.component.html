@@ -1,0 +1,128 @@
+<div class="flex flex-wrap">
+  <p class="text-2xl mb-5 border-b-2 border-red-400">This lessons for Angular course</p>
+  <div class="w-full">
+    <ul class="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row">
+      <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
+        <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal" (click)="toggleTabs(1)"
+           [ngClass]="{'text-gray-600 bg-white': openTab !== 1, 'text-white bg-indigo-600': openTab === 1}">
+          Lesson №1
+        </a>
+      </li>
+      <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
+        <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal" (click)="toggleTabs(2)"
+           [ngClass]="{'text-gray-600 bg-white': openTab !== 2, 'text-white bg-indigo-600': openTab === 2}">
+          Lesson №2
+        </a>
+      </li>
+      <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
+        <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal" (click)="toggleTabs(3)"
+           [ngClass]="{'text-gray-600 bg-white': openTab !== 3, 'text-white bg-indigo-600': openTab === 3}">
+          Lesson №3
+        </a>
+      </li>
+      <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
+        <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal" (click)="toggleTabs(4)"
+           [ngClass]="{'text-gray-600 bg-white': openTab !== 4, 'text-white bg-indigo-600': openTab === 4}">
+          Lesson №4
+        </a>
+      </li>
+    </ul>
+    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+      <div class="px-4 py-5 flex-auto">
+        <div class="tab-content tab-space">
+          <div [ngClass]="{'hidden': openTab !== 1, 'block': openTab === 1}">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus excepturi harum laudantium neque quis,
+              rem voluptatibus. A ab adipisci beatae cum debitis deserunt distinctio doloremque eaque eligendi error
+              facilis fuga harum impedit ipsum iste labore magni maxime molestiae molestias non nulla, numquam,
+              obcaecati officiis omnis perferendis placeat porro quasi quibusdam repellendus repudiandae rerum saepe
+              sapiente sequi sit, ut velit voluptate. Consequuntur corporis delectus eligendi excepturi expedita illo in
+              laudantium nostrum porro, quisquam reiciendis saepe sed veritatis. Consectetur consequatur deserunt
+              dolores dolorum eveniet harum iste neque odit repellendus tempora. Culpa cumque deserunt et iure, optio
+              pariatur? Alias animi aperiam architecto at consequatur consequuntur dicta doloribus dolorum eaque est et
+              illo illum impedit ipsam iste laborum libero minus modi mollitia nulla odit officia officiis, provident
+              quam quod ratione saepe. Consectetur doloremque eum iure, nihil porro possimus ullam. Autem commodi dolor
+              doloremque eos est fugiat iste iusto maxime quia, quos? Aliquam animi at autem consectetur, consequuntur
+              deleniti error esse exercitationem libero minus molestias necessitatibus non pariatur quaerat quo
+              temporibus totam. A aliquid beatae consequatur consequuntur dignissimos dolore doloribus eum itaque
+              molestias mollitia natus nihil officiis quasi saepe sed, ut, veritatis! Asperiores culpa, debitis deleniti
+              expedita illum odio officiis, pariatur quaerat sequi sunt vel!
+              <br/>
+              <br/>
+              Dramatically visualize customer directed convergence
+              without revolutionary ROI.
+            </p>
+          </div>
+          <div [ngClass]="{'hidden': openTab !== 2, 'block': openTab === 2}">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, alias amet aperiam asperiores
+              consectetur corporis dicta dolores doloribus ea eaque exercitationem facilis id impedit, itaque iusto
+              magni molestiae mollitia nam neque non obcaecati perspiciatis possimus praesentium provident qui quia quis
+              quo ratione recusandae reiciendis sed similique tempora tempore totam unde veniam vitae. A ab ad amet
+              assumenda at aut, consequatur cum error est fuga harum libero magnam magni minima nesciunt nostrum
+              perferendis qui repellat saepe sit suscipit tenetur vel vero! Asperiores atque consequatur dicta
+              dignissimos eius eligendi nostrum officiis pariatur placeat quisquam repellat, tenetur unde vel! Eaque
+              eligendi officia placeat provident veritatis? Blanditiis, consequatur corporis dignissimos illum minima
+              molestiae molestias nesciunt nobis non voluptatibus! Ad asperiores assumenda incidunt ipsa ipsam magnam
+              numquam officiis optio repellendus unde. Accusantium ad alias aliquid at cum dolore dolorem, doloribus
+              iure libero minima molestiae nemo nihil nisi quasi, quibusdam recusandae repudiandae vitae voluptas
+              voluptatem voluptatum! Atque autem blanditiis dolorem et harum, in, iste laborum maiores mollitia nemo
+              obcaecati placeat qui quisquam reprehenderit sit, sunt voluptas voluptatum. Alias, corporis dolore dolores
+              eaque enim, exercitationem expedita incidunt inventore labore porro quisquam ratione, repellat sint.
+              Architecto autem beatae doloribus esse eum impedit magni qui quisquam, rerum sit totam!
+              <br/>
+              <br/>
+              Dynamically innovate resource-leveling customer service for
+              state of the art customer service.
+            </p>
+          </div>
+          <div [ngClass]="{'hidden': openTab !== 3, 'block': openTab === 3}">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid enim et ex fugiat inventore itaque
+              magnam officia omnis qui, quibusdam, ratione reprehenderit suscipit totam voluptas, voluptatum? Delectus
+              dicta doloribus esse eum, ex impedit iusto libero praesentium quisquam, unde ut vel voluptate? Aut, autem
+              beatae eos ex ipsam omnis quaerat saepe veritatis! Alias consequuntur eligendi enim illo in minus non
+              optio perspiciatis, quasi, reprehenderit sit ullam ut vel voluptas voluptate. Consequatur dignissimos enim
+              eos ex exercitationem fuga inventore ipsam ipsum laboriosam maxime, nam officia omnis perferendis quasi
+              quidem repellendus unde! Culpa cumque eos error ipsa labore maxime, nemo nisi optio reiciendis saepe sint
+              ut, vero! Iste, nobis voluptatem? Ad adipisci, alias aperiam aut ea eligendi eos facere ipsum iure magnam
+              maiores mollitia nemo nihil non optio pariatur quas rerum saepe veniam vitae? Alias assumenda at
+              consequatur debitis delectus dolore dolorum ducimus eos excepturi id illo laudantium minima modi mollitia,
+              nesciunt porro quasi recusandae rerum vitae voluptas. Doloribus ea, eius et rerum sapiente tempore
+              voluptate voluptatem voluptatum. Eligendi facere id impedit laboriosam magnam modi mollitia natus qui
+              saepe sit. Aperiam aspernatur illum, labore nesciunt porro quos veritatis. Accusamus aspernatur aut,
+              consectetur distinctio dolorum ex libero nihil, obcaecati odit omnis, perferendis sapiente ut!
+              <br/>
+              <br/>
+              Dramatically maintain clicks-and-mortar solutions
+              without functional solutions.
+            </p>
+          </div>
+          <div [ngClass]="{'hidden': openTab !== 4, 'block': openTab === 4}">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid enim et ex fugiat inventore itaque
+              magnam officia omnis qui, quibusdam, ratione reprehenderit suscipit totam voluptas, voluptatum? Delectus
+              dicta doloribus esse eum, ex impedit iusto libero praesentium quisquam, unde ut vel voluptate? Aut, autem
+              beatae eos ex ipsam omnis quaerat saepe veritatis! Alias consequuntur eligendi enim illo in minus non
+              optio perspiciatis, quasi, reprehenderit sit ullam ut vel voluptas voluptate. Consequatur dignissimos enim
+              eos ex exercitationem fuga inventore ipsam ipsum laboriosam maxime, nam officia omnis perferendis quasi
+              quidem repellendus unde! Culpa cumque eos error ipsa labore maxime, nemo nisi optio reiciendis saepe sint
+              ut, vero! Iste, nobis voluptatem? Ad adipisci, alias aperiam aut ea eligendi eos facere ipsum iure magnam
+              maiores mollitia nemo nihil non optio pariatur quas rerum saepe veniam vitae? Alias assumenda at
+              consequatur debitis delectus dolore dolorum ducimus eos excepturi id illo laudantium minima modi mollitia,
+              nesciunt porro quasi recusandae rerum vitae voluptas. Doloribus ea, eius et rerum sapiente tempore
+              voluptate voluptatem voluptatum. Eligendi facere id impedit laboriosam magnam modi mollitia natus qui
+              saepe sit. Aperiam aspernatur illum, labore nesciunt porro quos veritatis. Accusamus aspernatur aut,
+              consectetur distinctio dolorum ex libero nihil, obcaecati odit omnis, perferendis sapiente ut!
+              <br/>
+              Dramatically maintain clicks-and-mortar solutions
+              without functional solutions.
+              Dramatically maintain clicks-and-mortar solutions
+              without functional solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>`

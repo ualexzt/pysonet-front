@@ -3,14 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './main/components/navbar/navbar.component';
+import { FriendsComponent } from './main/components/friends/friends.component';
+import { TeamsComponent } from './main/components/teams/teams.component';
+import {ProfileModule} from './profile/profile.module';
+import { MainLayoutComponent } from './main/components/main-layout/main-layout.component';
+import {HomePageComponent} from './main/home-page/home-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    FriendsComponent,
+    TeamsComponent,
+    MainLayoutComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ProfileModule
   ],
   providers: [],
   bootstrap: [AppComponent]
