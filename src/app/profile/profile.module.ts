@@ -10,6 +10,7 @@ import {DashboardPageComponent} from './dashboard-page/dashboard-page.component'
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { TeamsPageComponent } from './teams-page/teams-page.component';
 import { FriendsPageComponent } from './friends-page/friends-page.component';
+import { FooterPageComponent } from './components/footer-page/footer-page.component';
 
 
 const route: Routes = [
@@ -36,7 +37,8 @@ const route: Routes = [
     DashboardPageComponent,
     ProfilePageComponent,
     TeamsPageComponent,
-    FriendsPageComponent
+    FriendsPageComponent,
+    FooterPageComponent
     ],
   imports: [
     CommonModule,
