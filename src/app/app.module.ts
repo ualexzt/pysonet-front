@@ -9,6 +9,7 @@ import { TeamsComponent } from './main/components/teams/teams.component';
 import {ProfileModule} from './profile/profile.module';
 import { MainLayoutComponent } from './main/components/main-layout/main-layout.component';
 import {HomePageComponent} from './main/home-page/home-page.component';
+import { AboutComponent } from './main/components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {HomePageComponent} from './main/home-page/home-page.component';
     FriendsComponent,
     TeamsComponent,
     MainLayoutComponent,
-    HomePageComponent
+    HomePageComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

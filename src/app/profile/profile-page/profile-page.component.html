@@ -1,69 +1,74 @@
-<div class="mx-10 py-4 bg-white shadow-lg">
+<div class="mx-10 py-4 bg-blueGray-800 shadow-lg">
   <!--- Header --->
-  <div class="mt-6 pl-6 text-turquoise text-xl font-bold border-turquoise border-l-8">
-    Your profile info
+  <div class="flex flex-wrap items-center md:justify-between justify-center">
+
+    <div class=" ml-5 text-xl text-blueGray-500 font-semibold py-1 border-b-2">
+      Your profile info
+    </div>
+
   </div>
   <!--- End of header --->
   <!--- Form --->
 
   <form class="pl-6 mt-6 w-full" id="profile">
-    <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+    <div class="grid grid-cols-2 gap-5 md:grid-cols-2">
       <div class="">
-        <label for="first-name">
-          First name <span class="text-red-600 font-bold text-l">*</span>
+        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" for="first-name">
+          First name
         </label>
         <input type="text" name="first-name" id="first-name"
-               class="block bg-gray-100 rounded-l text-l mt-1 mb-3 p-2 w-full text-gray-500"></div>
+               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"></div>
       <div class="mr-5">
-        <label for="last-name">
+        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" for="last-name">
           Last name
         </label>
         <input type="text" name="last-name" id="last-name"
-               class="block bg-gray-100 rounded-l text-l mt-1 mb-3 p-2 w-full text-gray-500"></div>
+               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"></div>
 
       <div class="">
-        <label for="phone">
+        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" for="phone">
           Phone
         </label>
         <input type="tel" name="phone" id="phone"
-               class="block bg-gray-100 rounded-l text-l mt-1 mb-3 p-2 w-full text-gray-500">
+               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150">
       </div>
       <div class="mr-5">
-        <label for="github">
+        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" for="github">
           Github
         </label>
         <input type="text" name="github" id="github"
-               class="block bg-gray-100 rounded-l text-l mt-1 mb-3 p-2 w-full text-gray-500">
+               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150">
       </div>
       <div class="col-span-2 mr-5">
-        <label for="bio">
+        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" for="bio">
           About your
         </label>
         <textarea id="bio" maxlength="1000" rows="3" form="profile"
-                  class="block bg-gray-100 rounded-l text-l mt-1 mb-3 p-2 w-full text-gray-500">
+                  class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150">
         </textarea>
       </div>
       <div class="">
-        <label for="birthday">
+        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" for="birthday">
           Birthday
         </label>
         <input type="date" name="birthday" id="birthday"
-               class="block bg-gray-100 rounded-l text-l mt-1 mb-3 p-2 w-full text-gray-500">
+               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow
+               focus:outline-none focus:ring w-full ease-linear transition-all duration-150">
       </div>
       <div class="mr-5">
-        <label for="sex">
+        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" for="sex">
           Gender
         </label>
-        <select id="sex" class="block bg-gray-100 rounded-l text-l mt-1 mb-3 p-2 w-full text-gray-500">
+        <select id="sex" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150">
           <option value="1">Male</option>
           <option value="2">Female</option>
         </select>
       </div>
       <div class="col-span-2 mr-5">
-        <label for="technologies">
+        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" for="technologies">
           Technology
         </label>
-        <select id="technologies" class="block bg-gray-100 rounded-l text-l mt-1 mb-3 p-2 w-full text-gray-500">
+        <select id="technologies" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150">
           <option value="1">Django</option>
           <option value="2">FastAPI</option>
           <option value="3">Flask</option>
@@ -71,10 +76,12 @@
       </div>
 
     </div>
-    <button class="flex justify-center bg-indigo-500 text-white active:bg-indigo-600 font-bold uppercase text-xs w-full px-4 py-2 rounded-full
+    <div class="mr-5">
+    <button class=" flex justify-center bg-indigo-500 text-white active:bg-indigo-600 font-bold uppercase text-xs w-full px-4 py-2 rounded-full
           shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 mt-4 ease-linear transition-all duration-150"
             routerLink="1" type="button">Send
     </button>
+    </div>
   </form>
   <!--- End of form --->
 </div>

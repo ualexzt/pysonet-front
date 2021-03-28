@@ -16,7 +16,7 @@ import { FooterPageComponent } from './components/footer-page/footer-page.compon
 const route: Routes = [
   {
     path: '', component: ProfileLayoutComponent, children: [
-      {path: '', redirectTo: '/profile', pathMatch: 'full'},
+      {path: '', redirectTo: '/profile/dashboard', pathMatch: 'full'},
       {path: 'dashboard', component: DashboardPageComponent},
       {path: 'courses', component: CoursesPageComponent},
       {path: 'courses/:id', component: CoursPageComponent},

@@ -1,4 +1,18 @@
-<app-navbar></app-navbar>
+<div class="container bg-gray-200">
+  <app-navbar></app-navbar>
 
-<router-outlet></router-outlet>
+    <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 px-10">
+      <div class="p-2 mt-20">
+        <app-about></app-about>
+      </div>
+      <div class="col-span-2 p-2 mt-20">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="mt-20 p-2">
+        <app-friends></app-friends>
+      </div>
+    </div>
+
+</div>
+
 
