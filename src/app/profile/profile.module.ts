@@ -11,6 +11,7 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { TeamsPageComponent } from './teams-page/teams-page.component';
 import { FriendsPageComponent } from './friends-page/friends-page.component';
 import { FooterPageComponent } from './components/footer-page/footer-page.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 
 const route: Routes = [
@@ -38,10 +39,11 @@ const route: Routes = [
     ProfilePageComponent,
     TeamsPageComponent,
     FriendsPageComponent,
-    FooterPageComponent
+    FooterPageComponent,
     ],
   imports: [
     CommonModule,
+    DragDropModule,
     RouterModule.forChild(route)
   ]
 })

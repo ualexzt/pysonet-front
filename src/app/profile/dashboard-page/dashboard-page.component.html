@@ -1,79 +1,75 @@
 <div class="mx-10 py-4 bg-white shadow-lg">
-
   <div class="flex flex-wrap items-center md:justify-between justify-center">
 
     <div class=" ml-5 text-xl text-blueGray-500 font-semibold py-1 border-b-2">
       Kanban board
     </div>
-
-    <div class="flex justify-end px-4">
-
-      <div class="relative">
-        <select
-          class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded"
-          id="grid-state">
-          <option>Select project</option>
-          <option>Pysonet front-end angular</option>
-          <option>Language</option>
-        </select>
-      </div>
-
+    <div class="flex flex-row">
+      <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-gray-600 hover:opacity-75"
+         href="#pablo">
+        <i class="fas fa-thumbtack text-lg leading-lg text-gray-600 opacity-75"></i><span class="ml-2">Add task</span>
+      </a>
+      <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-gray-600 hover:opacity-75"
+         href="#pablo">
+        <i class="fas fa-project-diagram text-lg leading-lg text-gray-600 opacity-75"></i><span
+        class="ml-2">Add project</span>
+      </a>
+      <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-gray-600 hover:opacity-75"
+         href="#pablo">
+        <i class="far fa-share-square text-lg leading-lg text-gray-600 opacity-75"></i><span class="ml-2">Share</span>
+      </a>
     </div>
+
+    <div class="relative mr-5">
+      <select
+        class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded"
+        id="grid-state">
+        <option>Select project</option>
+        <option>Pysonet front-end angular</option>
+        <option>Language</option>
+      </select>
+    </div>
+
 
   </div>
-
 </div>
 
-<div class="grid grid-cols-4 gap-2 mx-10 mt-5 h-5/6 p-2 bg-white shadow-lg">
-  <div class="bg-gray-200">
+<!--DnD List -->
+
+
+<div class="grid grid-cols-4 gap-2 mx-10 mt-5 p-2 bg-white shadow-lg" cdkDropListGroup>
+
+
+  <div class="bg-gray-200" *ngFor="let items of list;let i=index">
+
     <div class="px-3 pb-4 pt-3 uppercase text-sm font-bold truncate border-b-2 border-gray-50 mx-1">
-      Backlog
-      <span class="lowercase"></span>
+      {{items.head}}
+      <span class="lowercase text-indigo-500">-{{ items.items.length }}</span>
     </div>
 
-    <div class="h-full pl-2" id="Backlog">
-      <div class="max-w-sm m-2 bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg">
-        <div id="header" class="flex items-center mb-2">
+
+    <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="items.items"
+         class="h-full pl-2" (cdkDropListDropped)="drop($event)">
+      <div
+        class="cursor-move max-w-sm m-2 bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg"
+        *ngFor="let item of items.items" cdkDrag>
+        <div class="flex items-center mb-2">
           <img alt="avatar" class="h-10 rounded-full border-2 border-gray-300"
                src="https://picsum.photos/seed/picsum/200"/>
-          <div id="header-text" class="leading-5 ml-6 sm">
-            <h5 id="name" class="text-sm font-semibold">John Doe</h5>
-            <h6 id="job" class="text-xs font-semibold text-blue-600">Designer</h6>
+          <div class="leading-5 ml-6 sm">
+            <h5 class="text-sm font-semibold">{{item.name}}</h5>
+            <h6 class="text-xs font-semibold text-blue-600">Designer</h6>
           </div>
         </div>
-        <div id="quote">
-          <p class="font-serif text-xs text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div>
+          <p class="font-serif text-sm text-gray-600">{{item.task}}</p>
           <hr>
           <p class="text-right"><small>28.03.2021</small></p>
         </div>
       </div>
     </div>
   </div>
-  <div class="bg-gray-200">
-    <div class="px-3 pb-4 pt-3 uppercase text-sm font-bold truncate border-b-2 border-gray-50 mx-1">
-      Selected for Development
-      <span class="lowercase text-13"></span>
-    </div>
-    <div class="h-full pl-2" id="Selected">
-
-    </div>
-  </div>
-  <div class="bg-gray-200">
-    <div class="px-3 pb-4 pt-3 uppercase text-sm font-bold truncate border-b-2 border-gray-50 mx-1">
-      In progress
-      <span class="lowercase text-13"></span>
-    </div>
-    <div class="h-full pl-2" id="InProgress">
-
-    </div>
-  </div>
-  <div class="bg-gray-200">
-    <div class="px-3 pb-4 pt-3 uppercase text-sm font-bold truncate border-b-2 border-gray-50 mx-1">
-      Done
-      <span class="lowercase text-13"></span>
-    </div>
-    <div class="h-full pl-2" id="Done">
-
-    </div>
-  </div>
 </div>
+
+
+
