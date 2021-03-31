@@ -12,6 +12,8 @@ import { TeamsPageComponent } from './teams-page/teams-page.component';
 import { FriendsPageComponent } from './friends-page/friends-page.component';
 import { FooterPageComponent } from './components/footer-page/footer-page.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { BoardMenuComponent } from './components/board-menu/board-menu.component';
+import {FormsModule} from '@angular/forms';
 
 
 const route: Routes = [
@@ -40,11 +42,13 @@ const route: Routes = [
     TeamsPageComponent,
     FriendsPageComponent,
     FooterPageComponent,
+    BoardMenuComponent,
     ],
   imports: [
     CommonModule,
     DragDropModule,
-    RouterModule.forChild(route)
+    RouterModule.forChild(route),
+    FormsModule
   ]
 })
 export class ProfileModule {

@@ -1,25 +1,32 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {CdkDragDrop, CdkDropList, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 
+export interface Task {
+  name: string;
+  task: string;
+  id?: number;
+}
+
 @Component({
   selector: 'app-dashboard-page',
   templateUrl: './dashboard-page.component.html',
   styleUrls: ['./dashboard-page.component.scss']
 })
 export class DashboardPageComponent implements OnInit {
-  todo = [
+
+  todo: Task[] = [
     {name: 'John Dou', task: 'Get to work'},
     {name: 'Alex Smith', task: 'Pick up groceries'},
     {name: 'Sara Conor', task: 'Go home'}
   ];
-  dev = [
+  dev: Task[] = [
     {name: 'Alex Smith', task: 'Pick up groceries'},
     {name: 'Sara Conor', task: 'Go home'}
   ];
-  process = [
+  process: Task[] = [
     {name: 'John Dou', task: 'Get to work'},
   ];
-  done = [];
+  done: Task[] = [];
   list = [
     {head: 'To do', items: this.todo},
     {head: 'Development', items: this.dev},
@@ -45,6 +52,7 @@ export class DashboardPageComponent implements OnInit {
         event.previousIndex,
         event.currentIndex
       );
+      console.log(event);
     } else {
       transferArrayItem(
         event.previousContainer.data,
@@ -52,6 +60,7 @@ export class DashboardPageComponent implements OnInit {
         event.previousIndex,
         event.currentIndex
       );
+      console.log(event);
     }
   }
 
