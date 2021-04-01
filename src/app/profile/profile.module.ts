@@ -10,16 +10,17 @@ import {DashboardPageComponent} from './dashboard-page/dashboard-page.component'
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { TeamsPageComponent } from './teams-page/teams-page.component';
 import { FriendsPageComponent } from './friends-page/friends-page.component';
-import { FooterPageComponent } from './components/footer-page/footer-page.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { BoardMenuComponent } from './components/board-menu/board-menu.component';
 import {FormsModule} from '@angular/forms';
+import { WallPageComponent } from './components/wall-page/wall-page.component';
 
 
 const route: Routes = [
   {
     path: '', component: ProfileLayoutComponent, children: [
-      {path: '', redirectTo: '/profile/dashboard', pathMatch: 'full'},
+      {path: '', redirectTo: '/profile/wall', pathMatch: 'full'},
+      {path: 'wall', component: WallPageComponent},
       {path: 'dashboard', component: DashboardPageComponent},
       {path: 'courses', component: CoursesPageComponent},
       {path: 'courses/:id', component: CoursPageComponent},
@@ -41,8 +42,8 @@ const route: Routes = [
     ProfilePageComponent,
     TeamsPageComponent,
     FriendsPageComponent,
-    FooterPageComponent,
     BoardMenuComponent,
+    WallPageComponent,
     ],
   imports: [
     CommonModule,
