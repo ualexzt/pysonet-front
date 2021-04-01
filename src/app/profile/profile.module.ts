@@ -13,7 +13,7 @@ import { FriendsPageComponent } from './friends-page/friends-page.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { BoardMenuComponent } from './components/board-menu/board-menu.component';
 import {FormsModule} from '@angular/forms';
-import { WallPageComponent } from './components/wall-page/wall-page.component';
+import { WallPageComponent } from './wall-page/wall-page.component';
 
 
 const route: Routes = [
