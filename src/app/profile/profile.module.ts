@@ -24,7 +24,7 @@ const route: Routes = [
       {path: 'dashboard', component: DashboardPageComponent},
       {path: 'courses', component: CoursesPageComponent},
       {path: 'courses/:id', component: CoursPageComponent},
-      {path: 'profile', component: ProfilePageComponent},
+      {path: 'account', component: ProfilePageComponent},
       {path: 'friends', component: FriendsPageComponent},
       {path: 'teams', component: TeamsPageComponent}
     ]
