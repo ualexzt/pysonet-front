@@ -14,6 +14,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 import { BoardMenuComponent } from './components/board-menu/board-menu.component';
 import {FormsModule} from '@angular/forms';
 import { WallPageComponent } from './wall-page/wall-page.component';
+import { CourseAboutComponent } from './components/course-about/course-about.component';
 
 
 const route: Routes = [
@@ -23,7 +24,7 @@ const route: Routes = [
       {path: 'wall', component: WallPageComponent},
       {path: 'dashboard', component: DashboardPageComponent},
       {path: 'courses', component: CoursesPageComponent},
-      {path: 'courses/:id', component: CoursPageComponent},
+      {path: 'courses/:id', component: CourseAboutComponent},
       {path: 'account', component: ProfilePageComponent},
       {path: 'friends', component: FriendsPageComponent},
       {path: 'teams', component: TeamsPageComponent}
@@ -44,6 +45,7 @@ const route: Routes = [
     FriendsPageComponent,
     BoardMenuComponent,
     WallPageComponent,
+    CourseAboutComponent,
     ],
   imports: [
     CommonModule,
