@@ -1,8 +1,10 @@
-<app-sidebar></app-sidebar>
-<app-navbar></app-navbar>
-
-  <div class="relative min-h-screen md:ml-64 md:mt-10 px-5 bg-gray-100">
-    <router-outlet></router-outlet>
+<div class="flex md:flex-row-reverse flex-wrap">
+  <app-sidebar></app-sidebar>
+  <app-navbar></app-navbar>
+  <div class="w-full md:w-4/5 bg-gray-100 h-screen">
+    <div class="container bg-gray-100 pt-10">
+      <router-outlet></router-outlet>
+    </div>
   </div>
-
+</div>
 
